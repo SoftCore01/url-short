@@ -59,7 +59,7 @@ p {
   color: hsl(257, 7%, 63%);
   line-height: 1.75rem;
   margin: 15px 0;
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(1rem + 0.2vw);
 }
 
 header {
@@ -99,6 +99,9 @@ nav a {
   font-weight: 700;
   color: white;
 }
+nav a:hover {
+  color: hsl(257, 27%, 26%);
+}
 
 button {
   height: 40px;
@@ -109,6 +112,10 @@ button {
   border-radius: 25px;
   min-width: 150px;
   font-size: 1rem;
+}
+button:hover {
+  background-color: hsl(180, 74%, 74%);
+  cursor: pointer;
 }
 
 .more-than {
@@ -128,7 +135,7 @@ button {
 .advanced-statistic {
   background-color: hsl(0, 0%, 92%);
   position: relative;
-  padding: 0 5vw;
+  padding: 0 5vw 10vh;
 }
 .advanced-statistic h2 {
   padding-top: 100px;
@@ -136,12 +143,12 @@ button {
 
 .card {
   background-color: white;
-  margin: 50px 0;
+  margin: 70px 0 0;
   position: relative;
-  padding: 50px 0 20px;
+  padding: 50px 0;
 }
 .card .img-cont {
-  top: -12%;
+  top: -30px;
   left: 50%;
   transform: translateX(-50%);
   background-color: hsl(257, 27%, 26%);
@@ -161,7 +168,7 @@ button {
 
 form {
   position: absolute;
-  top: -8%;
+  top: -100px;
   width: 80vw;
   margin: 30px 5vw;
   background-color: hsl(257, 27%, 26%);
@@ -189,7 +196,8 @@ form button {
   background-image: url(./images/bg-boost-mobile.svg);
   background-repeat: no-repeat;
   background-size: 100vw 100%;
-  height: 30vh;
+  padding-bottom: 20px;
+  margin-top: -24px;
 }
 .boost h2 {
   color: white;
@@ -209,6 +217,9 @@ footer a {
   font-size: 0.9rem;
   font-weight: 400;
 }
+footer a:hover {
+  color: hsl(180, 66%, 49%);
+}
 footer section {
   display: flex;
   flex-direction: column;
@@ -218,6 +229,14 @@ footer .socials {
   flex-direction: row;
   justify-content: center;
   margin: 20px 0 0;
+}
+
+.footer-logo {
+  filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(123deg) brightness(109%) contrast(100%);
+}
+
+.social-link:hover {
+  filter: brightness(0) saturate(100%) invert(94%) sepia(100%) saturate(2082%) hue-rotate(100deg) brightness(109%) contrast(104%);
 }
 
 @media screen and (min-width: 768px) {
@@ -279,23 +298,26 @@ footer .socials {
     background-size: 100vw;
     background-position: top 50px;
     display: block;
-    top: -12%;
+    top: -80px;
   }
   form input {
-    width: 80%;
+    width: 70%;
     margin-top: 10px;
+  }
+  form button {
+    width: 20%;
   }
   .advanced-statistic h2, .advanced-statistic p {
     text-align: center;
   }
   .card-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
   }
   .card {
     text-align: left;
-    padding: 50px 20px 20px;
+    padding: 50px 15px 20px;
   }
   .card p {
     text-align: left;
@@ -309,5 +331,16 @@ footer .socials {
   footer {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 1444px) {
+  form {
+    max-width: 1500px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .card h3 {
+    text-align: center;
   }
 }/*# sourceMappingURL=style.css.map */
